@@ -21,35 +21,33 @@ namespace entity_test
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             using (UserContext db = new UserContext())
             {
-                User user = new User(textBoxLog.Text, this.GetHashString(textBoxPass.Text), textBoxEmail.Text, "User");
+                User user = new User(textBoxLog.Text, GetHashString(textBoxPass.Text), textBoxEmail.Text, "User");
                 db.Users.Add(user);
                 db.SaveChanges();
             }
         }
-
         private void buttonSign_Click(object sender, EventArgs e)
         {
             using (UserContext db = new UserContext())
             {
                 foreach(User user in db.Users)
                 {
-                    if(textBoxLogin.Text == user.Login && this.GetHashString(textBoxPassword.Text) == user.Password)
+                    if(textBoxLogin.Text == user.Login && GetHashString(textBoxPassword.Text) == user.Password)
                     {
                         MessageBox.Show("Вход успешен!");
                         UserForm userform = new UserForm();
                         userform.label1.Text = user.Login;
                         userform.Show();
-                        userform.Form1 = this;
+                        //userform.Form1 = this;
                         this.Visible = false;
                         return;
                     }
-                    MessageBox.Show("Логин или пароль указан неверно! ");
                 }
+                MessageBox.Show("Логин или пароль указан неверно! ");
             }
         }
 
@@ -68,7 +66,7 @@ namespace entity_test
 
         private void buttonSendPassword_Click(object sender, EventArgs e)
         {
-            MailAddress from = new MailAddress("zaid-mingaliev@mail.ru", "Zaid");
+            MailAddress from = new MailAddress("server.christaw@gmail.com", "Adel");
             MailAddress to = new MailAddress(textBoxEmail.Text);
             MailMessage m = new MailMessage(from, to);
             m.Subject = "Тест";
@@ -83,12 +81,11 @@ namespace entity_test
                 }
             }
             m.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
-            smtp.Credentials = new NetworkCredential("zaid-mingaliev@mail.ru", "123");
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com.", 587);
+            smtp.Credentials = new NetworkCredential("server.christaw@gmail.com", "kira1007");
             smtp.EnableSsl = true;
             smtp.Send(m);
         }
-
     }
     public class User
     {
