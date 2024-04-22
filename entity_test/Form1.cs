@@ -82,7 +82,7 @@ namespace entity_test
                 }
             }
             m.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com.", 587);
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.Credentials = new NetworkCredential("server.christaw@gmail.com", "kira1007");
             smtp.EnableSsl = true;
             smtp.Send(m);
