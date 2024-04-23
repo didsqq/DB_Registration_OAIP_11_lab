@@ -30,3 +30,5 @@ C:\Users\Господин\Desktop\entity_test\entity_test\obj\Debug\entity_test.
 C:\Users\Господин\Desktop\entity_test\entity_test\obj\Debug\entity_test.csproj.CopyComplete
 C:\Users\Господин\Desktop\entity_test\entity_test\obj\Debug\entity_test.exe
 C:\Users\Господин\Desktop\entity_test\entity_test\obj\Debug\entity_test.pdb
+C:\Users\Адель\Desktop\OAIP_11\entity_test\obj\Debug\entity_test.RegistrationForm.resources
+C:\Users\Адель\Desktop\OAIP_11\entity_test\obj\Debug\entity_test.SendPasForm.resources

@@ -22,29 +22,20 @@ namespace entity_test
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using (UserContext db = new UserContext())
-            {
-                User user = new User(textBoxLog.Text, GetHashString(textBoxPass.Text), textBoxEmail.Text, "User");
-                db.Users.Add(user);
-                db.SaveChanges();
-            }
-        }
         private void buttonSign_Click(object sender, EventArgs e)
         {
             using (UserContext db = new UserContext())
             {
-                foreach(User user in db.Users)
+                foreach(User user in db.users)
                 {
                     if(textBoxLogin.Text == user.Login && GetHashString(textBoxPassword.Text) == user.Password)
                     {
                         MessageBox.Show("Вход успешен!");
                         UserForm userform = new UserForm();
                         userform.label1.Text = user.Login;
-                        userform.Show();
-                        //userform.Form1 = this;
-                        this.Visible = false;
+                        this.Hide();
+                        userform.ShowDialog();
+                        this.Show();
                         return;
                     }
                 }
@@ -64,28 +55,21 @@ namespace entity_test
             }
             return hash;
         }
-
+        
         private void buttonSendPassword_Click(object sender, EventArgs e)
         {
-            MailAddress from = new MailAddress("server.christaw@gmail.com", "Adel");
-            MailAddress to = new MailAddress(textBoxEmail.Text);
-            MailMessage m = new MailMessage(from, to);
-            m.Subject = "Тест";
-            using (UserContext db = new UserContext())
-            {
-                foreach (User user in db.Users)
-                {
-                    if (textBoxEmail.Text == user.Email)
-                    {
-                        m.Body = "<h1>Пароль: " + user.Password + "</h1>";
-                    }
-                }
-            }
-            m.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new NetworkCredential("server.christaw@gmail.com", "kira1007");
-            smtp.EnableSsl = true;
-            smtp.Send(m);
+            SendPasForm sendPasForm = new SendPasForm();
+            this.Hide();
+            sendPasForm.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationForm = new RegistrationForm();
+            this.Hide();
+            registrationForm.ShowDialog();
+            this.Show();
         }
     }
     public class User
@@ -108,6 +92,6 @@ namespace entity_test
     public class UserContext : DbContext
     {
         public UserContext() : base("DbConnection") { }
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> users { get; set; }
     }
 }
