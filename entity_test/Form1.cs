@@ -28,11 +28,11 @@ namespace entity_test
             {
                 foreach(User user in db.users)
                 {
-                    if(textBoxLogin.Text == user.Login && GetHashString(textBoxPassword.Text) == user.Password)
+                    if(textBoxLogin.Text == user.Name && GetHashString(textBoxPassword.Text) == user.Password)
                     {
                         MessageBox.Show("Вход успешен!");
                         UserForm userform = new UserForm();
-                        userform.label1.Text = user.Login;
+                        userform.label1.Text = user.Name;
                         this.Hide();
                         userform.ShowDialog();
                         this.Show();
@@ -75,18 +75,28 @@ namespace entity_test
     public class User
     {
         public int Id { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public string Name { get; set; }
+        public string SurName { get; set; }
+        public DateTime Date { get; set; }
         public string Email { get; set; }
-        public string Role { get; set; }
-
+        public string Phone { get; set; }
+        public string Kaf { get; set; }
+        public string Step { get; set; }
+        public DateTime DateWork { get; set; }
+        public string Password { get; set; }
+        
         public User() { }
-        public User(string Login, string Password, string Email, string Role)
+        public User(string Name, string SurName, DateTime Date, string Email, string Phone, string Kaf, string Step, DateTime DateWork, string Password)
         {
-            this.Login = Login;
+            this.Name = Name;
             this.Password = Password;
             this.Email = Email;
-            this.Role = Role;
+            this.SurName = SurName;
+            this.Date = Date;
+            this.Phone = Phone;
+            this.Kaf = Kaf;
+            this.Step = Step;
+            this.DateWork = DateWork;
         }
     }
     public class UserContext : DbContext

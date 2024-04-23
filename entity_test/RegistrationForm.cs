@@ -22,7 +22,7 @@ namespace entity_test
         {
             using (UserContext db = new UserContext())
             {
-                User user = new User(textBoxName.Text, GetHashString(textBoxPass.Text), textBoxEmail.Text, "User");
+                User user = new User(textBoxName.Text, textBoxSurName.Text, dateTimePicker1.Value, textBoxEmail.Text, textBoxPhone.Text, textBoxKaf.Text, textBoxStep.Text, dateTimePicker2.Value, GetHashString(textBoxPass.Text));
                 db.users.Add(user);
                 db.SaveChanges();
             }
