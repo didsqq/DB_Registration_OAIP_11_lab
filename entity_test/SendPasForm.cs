@@ -24,7 +24,7 @@ namespace entity_test
             MailAddress from = new MailAddress("didsqq@yandex.ru", "Adel");
             MailAddress to = new MailAddress(textBoxEmail.Text);
             MailMessage m = new MailMessage(from, to);
-            m.Subject = "Тест";
+            m.Subject = "Восстановление пароля";
             using (UserContext db = new UserContext())
             {
                 foreach (User user in db.users)
@@ -40,6 +40,19 @@ namespace entity_test
             smtp.Credentials = new NetworkCredential("didsqq@yandex.ru", "lhybtwljdlunlgjk");
             smtp.EnableSsl = true;
             smtp.Send(m);
+        }
+        static string GeneratePassword(int length)
+        {
+            const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            Random random = new Random();
+            char[] password = new char[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                password[i] = validChars[random.Next(validChars.Length)];
+            }
+
+            return new string(password);
         }
     }
 }

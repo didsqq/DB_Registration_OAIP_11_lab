@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|c:\\users\\\u0430\u0434\u0435\u043B\u044C\\desktop\\oaip_11\\entity_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\sendpasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\sendpasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|c:\\users\\\u0430\u0434\u0435\u043B\u044C\\desktop\\oaip_11\\entity_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\sendpasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\sendpasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3A34D67D-5E35-45EE-913B-6D0DDC34479D}|entity_test\\entity_test.csproj|solutionrelative:entity_test\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 103,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RegistrationForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\RegistrationForm.cs",
               "RelativeDocumentMoniker": "entity_test\\RegistrationForm.cs",
@@ -59,26 +59,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\Form1.cs",
               "RelativeDocumentMoniker": "entity_test\\Form1.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\Form1.cs",
               "RelativeToolTip": "entity_test\\Form1.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAD4vx8AAAAVAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwB8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-17T09:26:19.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SendPasForm.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\SendPasForm.cs",
               "RelativeDocumentMoniker": "entity_test\\SendPasForm.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u0435\u043B\u044C\\Desktop\\OAIP_11\\entity_test\\SendPasForm.cs",
               "RelativeToolTip": "entity_test\\SendPasForm.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA1wA4AAAArAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAqwDcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T10:58:08.7Z",
               "EditorCaption": ""
