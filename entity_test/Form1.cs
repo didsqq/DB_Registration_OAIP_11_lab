@@ -31,8 +31,8 @@ namespace entity_test
                     if(textBoxLogin.Text == user.Name && GetHashString(textBoxPassword.Text) == user.Password)
                     {
                         MessageBox.Show("Вход успешен!");
-                        UserForm userform = new UserForm();
-                        userform.label1.Text = user.Name;
+                        UserForm userform = new UserForm(user);
+
                         this.Hide();
                         userform.ShowDialog();
                         this.Show();
@@ -43,7 +43,7 @@ namespace entity_test
             }
         }
 
-        private string GetHashString(string s)
+        public static string GetHashString(string s)
         {
             byte[] bytes = Encoding.Unicode.GetBytes(s);
             MD5CryptoServiceProvider CSP = new MD5CryptoServiceProvider();

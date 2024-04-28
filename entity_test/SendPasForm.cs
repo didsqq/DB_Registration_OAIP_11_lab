@@ -22,32 +22,62 @@ namespace entity_test
         private void button1_Click(object sender, EventArgs e)
         {
             MailAddress from = new MailAddress("didsqq@yandex.ru", "Adel");
-            MailAddress to = new MailAddress(textBoxEmail.Text);
-            MailMessage m = new MailMessage(from, to);
-            m.Subject = "Восстановление пароля";
-            using (UserContext db = new UserContext())
+            /*string mail = textBoxEmail.Text;
+            int flag = 0;
+            foreach(char c in mail)
             {
-                foreach (User user in db.users)
-                {
-                    if (textBoxEmail.Text == user.Email)
-                    {
-                        m.Body = "<h1>Пароль: " + user.Password + "</h1>";
-                    }
-                }
+                if (c == '@')
+                    flag = 1;
             }
-            m.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
-            smtp.Credentials = new NetworkCredential("didsqq@yandex.ru", "lhybtwljdlunlgjk");
-            smtp.EnableSsl = true;
-            smtp.Send(m);
+            if(flag == 0)
+            {
+                MessageBox.Show("Неверная почта");
+                return;
+            }*/
+
+            try
+            {
+
+                MailAddress to = new MailAddress(textBoxEmail.Text);
+                MailMessage m = new MailMessage(from, to);
+                m.Subject = "Восстановление пароля";
+                using (UserContext db = new UserContext())
+                {
+                    foreach (User user in db.users)
+                    {
+                        if (textBoxEmail.Text == user.Email)
+                        {
+                            string password = GeneratePassword();
+
+                            m.Body = "<h1>Пароль: " + password + "</h1>";
+                            string pass_hash = Form1.GetHashString(password);
+                            user.Password = pass_hash;
+
+                            MessageBox.Show("Пароль отправлен на почту");
+                            Close();
+                        }
+                    }
+                    db.SaveChanges();
+                }
+                m.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient("smtp.yandex.ru", 587);
+                smtp.Credentials = new NetworkCredential("didsqq@yandex.ru", "lhybtwljdlunlgjk");
+                smtp.EnableSsl = true;
+                smtp.Send(m);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
-        static string GeneratePassword(int length)
+        private string GeneratePassword()
         {
             const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             Random random = new Random();
-            char[] password = new char[length];
+            char[] password = new char[10];
 
-            for (int i = 0; i < length; i++)
+            for (int i = 0; i < 10; i++)
             {
                 password[i] = validChars[random.Next(validChars.Length)];
             }

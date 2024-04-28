@@ -12,9 +12,20 @@ namespace entity_test
 {
     public partial class UserForm : Form
     {
-        public UserForm()
+
+        public UserForm(User user)
         {
             InitializeComponent();
+
+            textBoxName.Text = user.Name;
+            textBoxSurName.Text = user.SurName;
+            dateTimePicker1.Value = user.Date;
+            textBoxEmail.Text = user.Email;
+            textBoxPhone.Text = user.Phone;
+            textBoxKaf.Text = user.Kaf;
+            textBoxStep.Text = user.Step;
+            dateTimePicker2.Value = user.DateWork;
+
         }
     }
 }

@@ -44,9 +44,9 @@
             this.label4.Location = new System.Drawing.Point(13, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 25);
+            this.label4.Size = new System.Drawing.Size(61, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "login";
+            this.label4.Text = "name";
             // 
             // textBoxLogin
             // 
