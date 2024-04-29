@@ -22,18 +22,6 @@ namespace entity_test
         private void button1_Click(object sender, EventArgs e)
         {
             MailAddress from = new MailAddress("didsqq@yandex.ru", "Adel");
-            /*string mail = textBoxEmail.Text;
-            int flag = 0;
-            foreach(char c in mail)
-            {
-                if (c == '@')
-                    flag = 1;
-            }
-            if(flag == 0)
-            {
-                MessageBox.Show("Неверная почта");
-                return;
-            }*/
 
             try
             {
@@ -55,6 +43,11 @@ namespace entity_test
 
                             MessageBox.Show("Пароль отправлен на почту");
                             Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Почта не найдена");
+                            return;
                         }
                     }
                     db.SaveChanges();

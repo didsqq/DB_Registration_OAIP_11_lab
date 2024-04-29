@@ -28,7 +28,7 @@ namespace entity_test
             {
                 foreach(User user in db.users)
                 {
-                    if(textBoxLogin.Text == user.Name && GetHashString(textBoxPassword.Text) == user.Password)
+                    if(textBoxMail.Text == user.Email && GetHashString(textBoxPassword.Text) == user.Password)
                     {
                         MessageBox.Show("Вход успешен!");
                         UserForm userform = new UserForm(user);
@@ -39,7 +39,7 @@ namespace entity_test
                         return;
                     }
                 }
-                MessageBox.Show("Логин или пароль указан неверно! ");
+                MessageBox.Show("Почта или пароль указаны неверно! ");
             }
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxMail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonSign = new System.Windows.Forms.Button();
@@ -44,17 +44,17 @@
             this.label4.Location = new System.Drawing.Point(13, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 25);
+            this.label4.Size = new System.Drawing.Size(47, 25);
             this.label4.TabIndex = 7;
-            this.label4.Text = "name";
+            this.label4.Text = "mail";
             // 
-            // textBoxLogin
+            // textBoxMail
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(13, 38);
-            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(293, 22);
-            this.textBoxLogin.TabIndex = 8;
+            this.textBoxMail.Location = new System.Drawing.Point(13, 38);
+            this.textBoxMail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxMail.Name = "textBoxMail";
+            this.textBoxMail.Size = new System.Drawing.Size(293, 22);
+            this.textBoxMail.TabIndex = 8;
             // 
             // label5
             // 
@@ -116,7 +116,7 @@
             this.Controls.Add(this.buttonSign);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxLogin);
+            this.Controls.Add(this.textBoxMail);
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -128,7 +128,7 @@
 
         #endregion
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxMail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonSign;

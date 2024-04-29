@@ -42,11 +42,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxKaf = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxStep = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxKaf = new System.Windows.Forms.ComboBox();
+            this.comboBoxStep = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -184,14 +184,6 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Кафедра";
             // 
-            // textBoxKaf
-            // 
-            this.textBoxKaf.Location = new System.Drawing.Point(18, 378);
-            this.textBoxKaf.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxKaf.Name = "textBoxKaf";
-            this.textBoxKaf.Size = new System.Drawing.Size(293, 22);
-            this.textBoxKaf.TabIndex = 20;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -202,14 +194,6 @@
             this.label8.Size = new System.Drawing.Size(159, 25);
             this.label8.TabIndex = 21;
             this.label8.Text = "Ученая степень";
-            // 
-            // textBoxStep
-            // 
-            this.textBoxStep.Location = new System.Drawing.Point(18, 445);
-            this.textBoxStep.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxStep.Name = "textBoxStep";
-            this.textBoxStep.Size = new System.Drawing.Size(293, 22);
-            this.textBoxStep.TabIndex = 22;
             // 
             // label9
             // 
@@ -229,16 +213,32 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(170, 22);
             this.dateTimePicker2.TabIndex = 24;
             // 
+            // comboBoxKaf
+            // 
+            this.comboBoxKaf.FormattingEnabled = true;
+            this.comboBoxKaf.Location = new System.Drawing.Point(18, 377);
+            this.comboBoxKaf.Name = "comboBoxKaf";
+            this.comboBoxKaf.Size = new System.Drawing.Size(293, 24);
+            this.comboBoxKaf.TabIndex = 25;
+            // 
+            // comboBoxStep
+            // 
+            this.comboBoxStep.FormattingEnabled = true;
+            this.comboBoxStep.Location = new System.Drawing.Point(18, 444);
+            this.comboBoxStep.Name = "comboBoxStep";
+            this.comboBoxStep.Size = new System.Drawing.Size(293, 24);
+            this.comboBoxStep.TabIndex = 26;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 694);
+            this.Controls.Add(this.comboBoxStep);
+            this.Controls.Add(this.comboBoxKaf);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBoxStep);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxKaf);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxPhone);
             this.Controls.Add(this.label6);
@@ -276,10 +276,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxKaf;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxStep;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox comboBoxKaf;
+        private System.Windows.Forms.ComboBox comboBoxStep;
     }
 }
